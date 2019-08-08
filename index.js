@@ -1,0 +1,1 @@
+import '@nextbitlabs/gantt-chart';

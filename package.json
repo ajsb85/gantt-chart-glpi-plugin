@@ -1,0 +1,8 @@
+{
+  "name": "ternary-plot",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@nextbitlabs/gantt-chart": "^1.0.2"
+  }
+}

@@ -1,0 +1,134 @@
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
+  /*
+    CSS custom properties penetrate the Shadow DOM,
+    they are useful to provide custom styling.
+    The ternary-plot webcomponent exposes font-size and font-family custom properties.
+  */
+  ternary-plot {
+    --font-size: 13px;
+    --font-family: 'Roboto Mono', monospace;
+  }
+</style>
+
+<gantt-chart
+  width="660"
+  height="400"
+  margin-top="40"
+  margin-left="40"
+  margin-right="80"
+  margin-bottom="140"
+></gantt-chart>
+
+  <script>
+    const element = document.querySelector('gantt-chart');
+
+		const data = {
+			milestones: [
+				{
+					id: 1,
+					taskId: 6,
+					title: 'Version 1.1'
+				},
+				{
+					id: 2,
+					taskId: 7,
+					title: 'Version 1.0'
+				},
+				{
+					id: 3,
+					taskId: 11,
+					title: 'Version 2.0'
+				},
+			],
+			tasks: [
+				{
+					id: 1,
+					title: 'task 1',
+					start: 0,
+					duration: 4,
+					class: 'c1'
+				},
+				{
+					id: 2,
+					title: 'task 2',
+					start: 4,
+					duration: 3,
+					class: 'c1'
+				},
+				{
+					id: 3,
+					title: 'task 3',
+					start: 5,
+					duration: 4,
+					class: 'c1'
+				},
+				{
+					id: 4,
+					title: 'task 4',
+					start: 7,
+					duration: 2,
+					class: 'c1'
+				},
+				{
+					id: 5,
+					title: 'task 5',
+					start: 8,
+					duration: 4,
+					class: 'c1',
+				},
+				{
+					id: 6,
+					title: 'task 6',
+					start: 10,
+					duration: 4,
+					class: 'c1',
+				},
+				{
+					id: 7,
+					title: 'task 7',
+					start: 0,
+					duration: 4,
+					class: 'c3'
+				},
+				{
+					id: 8,
+					title: 'task 8',
+					start: 11,
+					duration: 5,
+					class: 'c3',
+				},
+				{
+					id: 9,
+					title: 'task 9',
+					start: 14,
+					duration: 2,
+					class: 'c3'
+				},
+				{
+					id: 10,
+					title: 'task 10',
+					start: 16,
+					duration: 5,
+					class: 'c1'
+				},
+				{
+					id: 11,
+					title: 'task 11',
+					start: 21,
+					duration: 6,
+					class: 'c3'
+				},
+				{
+					id: 12,
+					title: 'task 12',
+					start: 25,
+					duration: 2,
+					class: 'c3'
+				}
+			]
+		};
+
+    // Set gantt data: tasks and milestones.
+    element.data = data;
+  </script>
